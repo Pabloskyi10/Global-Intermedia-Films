@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Bodoni Moda", serif;
+  
+  --color-gold: #F8C800;
+  --color-gold-light: #FFD700;
+  --color-black-pure: #0B0B0B;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0B0B0B] text-white selection:bg-gold/30 selection:text-white;
+  }
+}
+
+.cinematic-gradient {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+}
+
+.gold-text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-gold-light to-gold;
+}
+
+.bento-item {
+  @apply relative overflow-hidden rounded-2xl border border-white/5 bg-zinc-900/50 transition-all duration-500 hover:border-gold/30 hover:shadow-[0_0_30px_rgba(148,124,72,0.15)];
+}
